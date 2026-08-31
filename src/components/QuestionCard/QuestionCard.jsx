@@ -6,18 +6,17 @@ export const QuestionCard = ({ card }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardLabels}>
-        <div className=""> Level 1</div>
-        <div className=""> Level 1</div>
+        <div className="">Level: {card.level}</div>
+        <div className="">{card.completed ? "Completed" : "Not Completed"}</div>
       </div>
 
       <h5 className={styles.cardTitle}>
-        {/* {card.question} */}
-        khj
+      {card.question}
       </h5>
 
       <div className={styles.cardAnswers}>
         <label>short answer: </label>
-        <p className={styles.cardAnswer}>kjhk</p>
+        <p className={styles.cardAnswer}>{card.answer}</p>
       </div>
 
       <Button onClick={() => navigate(`/question/${card.id}`)}>View</Button>
