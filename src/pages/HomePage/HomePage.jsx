@@ -1,4 +1,4 @@
-import { QuestionCard } from "../../components/QuestionCard";
+import { QuestionCardList } from "../../components/QuestionCardList";
 import styles from "./HomePage.module.css";
 import { API_URL } from "../../constants";
 import { useEffect, useState } from "react";
@@ -22,9 +22,7 @@ export const HomePage = () => {
 
   return (
     <div className={styles.HomePage}>
-      {questions.map((card) => (
-        <QuestionCard card={card} key={card.id} />
-      ))}
+      <QuestionCardList cards={questions}/>
     </div>
   );
 };
