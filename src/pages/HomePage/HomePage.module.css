@@ -8,3 +8,8 @@
   align-items: center;
   gap: 10px;
 }
+
+.noCardInfo{
+  margin: 20px auto;
+  width: fit-content;
+}
