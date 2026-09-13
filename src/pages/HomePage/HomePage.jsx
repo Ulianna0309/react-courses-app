@@ -4,6 +4,7 @@ import { API_URL } from "../../constants";
 import { useEffect, useState } from "react";
 import { Loader } from "../../components/Loader/Loader";
 import { useFetch } from "../../hooks/useFetch";
+import { SearchInput } from "../../components/SearchInput";
 
 export const HomePage = () => {
   const [questions, setQuestions, error] = useState([]);
@@ -27,7 +28,9 @@ export const HomePage = () => {
 
   return (
     <div className={styles.HomePage}>
-      <input type="text" placeholder="search" value={searchValue} onChange={onSeachChangeHandler}/>
+      <div className={styles.controlsContainer}>
+      <SearchInput/>
+      </div>
       {/* <button onClick={testRefHendler}>test ref</button> */}
       {isLoading && <Loader />}
       {error && <p>{error}</p>}
